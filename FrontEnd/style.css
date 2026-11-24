@@ -1,0 +1,426 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f7f8f3;
+    color: #17211d;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+    border-bottom: 1px solid #e1e5dc;
+}
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    color: #17211d;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #7ca443;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #68736d;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.navbar nav a:hover {
+    color: #17211d;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-buttons button {
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-buttons .signup-btn {
+    background: #17211d;
+    color: white;
+}
+
+/* HERO SECTION */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+    padding: 75px 9%;
+    min-height: 520px;
+}
+
+.tagline {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #74836c;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    color: #718c50;
+}
+
+.description {
+    color: #68736d;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 450px;
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    display: inline-block;
+    background: #17211d;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.explore-btn:hover {
+    background: #344b39;
+    transform: translateY(-3px);
+}
+
+/* HERO ART CARD */
+
+.hero-card {
+    position: relative;
+    background: #dfff9b;
+    border-radius: 25px;
+    padding: 30px;
+    min-height: 350px;
+    overflow: hidden;
+    box-shadow: 15px 20px 45px #17211d12;
+}
+
+.hero-card > p:first-child {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-art {
+    position: absolute;
+    top: 35px;
+    right: 25px;
+    font-size: 130px;
+    color: #f58e68;
+    transform: rotate(15deg);
+}
+
+.hero-card h2 {
+    position: absolute;
+    bottom: 65px;
+    left: 30px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 43px;
+    line-height: 0.95;
+    letter-spacing: -2px;
+}
+
+.hero-card > p:last-child {
+    position: absolute;
+    bottom: 28px;
+    left: 30px;
+    font-size: 12px;
+    color: #48553c;
+}
+
+/* EVENTS SECTION */
+
+.events-section {
+    padding: 80px 8%;
+    background: white;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading .tagline {
+    margin-bottom: 12px;
+}
+
+.section-heading h2,
+.about-section h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 42px;
+    letter-spacing: -2px;
+    margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+    color: #68736d;
+    font-size: 14px;
+}
+
+/* EVENT CARDS */
+
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.event-card {
+    background: #fff;
+    border: 1px solid #e5e9e0;
+    border-radius: 17px;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px #17211d12;
+}
+
+.event-image {
+    height: 190px;
+    display: grid;
+    place-items: center;
+    font-size: 65px;
+}
+
+.comedy {
+    background: #f6c7aa;
+}
+
+.music {
+    background: #c9d8ff;
+}
+
+.workshop {
+    background: #dfff9b;
+}
+
+.event-info {
+    padding: 22px;
+}
+
+.event-category {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #77856e;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.event-info h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.event-info > p:not(.event-category) {
+    font-size: 12px;
+    color: #68736d;
+    margin-bottom: 9px;
+}
+
+.event-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #e8ebe4;
+    padding-top: 18px;
+    margin-top: 20px;
+}
+
+.event-bottom strong {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
+}
+
+.event-bottom button {
+    border: none;
+    background: #dfff9b;
+    color: #17211d;
+    border-radius: 25px;
+    padding: 12px 15px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.event-bottom button:hover {
+    background: #c8ed7f;
+}
+
+/* ABOUT SECTION */
+
+.about-section {
+    padding: 85px 8%;
+    text-align: center;
+    background: #edf1e6;
+}
+
+.about-section .tagline {
+    margin-bottom: 15px;
+}
+
+.about-section h2 {
+    margin-bottom: 15px;
+}
+
+.about-section > p:last-child {
+    max-width: 550px;
+    margin: auto;
+    color: #68736d;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 8%;
+    gap: 15px;
+}
+
+footer .logo {
+    font-size: 22px;
+}
+
+footer p {
+    color: #68736d;
+    font-size: 11px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 55px 7%;
+    }
+
+    .hero-card {
+        min-height: 300px;
+    }
+
+    .event-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-card h2 {
+        font-size: 36px;
+    }
+
+    .events-section {
+        padding: 55px 6%;
+    }
+
+    .section-heading h2,
+    .about-section h2 {
+        font-size: 34px;
+    }
+
+    .event-container {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.create-event-form {
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.create-event-form label {
+    font-weight: 600;
+}
+
+.create-event-form input {
+    padding: 12px;
+    border: 1px solid #d7d7d7;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.create-event-form button {
+    margin-top: 12px;
+    padding: 13px;
+    cursor: pointer;
+}
+
+#create-event-message {
+    font-weight: 600;
+}

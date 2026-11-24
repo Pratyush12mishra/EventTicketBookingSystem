@@ -1,0 +1,17 @@
+# Java compiled files
+bin/
+*.class
+
+# macOS
+.DS_Store
+
+# Environment secrets
+.env
+.env.*
+
+# Node.js (if applicable)
+node_modules/
+dist/
+
+# Eclipse workspace
+.metadata/
